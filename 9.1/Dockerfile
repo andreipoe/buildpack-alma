@@ -21,7 +21,6 @@ RUN yum install -y epel-release && \
         libxml2-devel \
         libxslt-devel \
         make \
-        mysql-devel \
         ncurses-devel \
         openssl \
         openssl-devel \
