@@ -213,7 +213,6 @@ steps:
   - name: manifest-8.4
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 8.4/manifest-spec.yml
       username: andreipoe
       password:
@@ -221,7 +220,6 @@ steps:
   - name: manifest-8.5
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 8.5/manifest-spec.yml
       username: andreipoe
       password:
@@ -229,7 +227,6 @@ steps:
   - name: manifest-8.6
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 8.6/manifest-spec.yml
       username: andreipoe
       password:
@@ -237,7 +234,6 @@ steps:
   - name: manifest-8.7
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 8.7/manifest-spec.yml
       username: andreipoe
       password:
@@ -245,7 +241,6 @@ steps:
   - name: manifest-8
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 8/manifest-spec.yml
       username: andreipoe
       password:
@@ -253,7 +248,6 @@ steps:
   - name: manifest-9
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 9/manifest-spec.yml
       username: andreipoe
       password:
@@ -261,7 +255,6 @@ steps:
   - name: manifest-9.1
     image: plugins/manifest
     settings:
-      target: andreipoe/buildpack-alma
       spec: 9.1/manifest-spec.yml
       username: andreipoe
       password:
@@ -289,6 +282,6 @@ trigger:
 
 ---
 kind: signature
-hmac: e0831c71b4aaf05ef95201c4d02988395c56cf6dcf8b88c8044b88a53d4995f0
+hmac: 3c9b9c6448141f7b845a403dae31dedd9dfc65b81adf72bf7a21e080bad80172
 
 ...
