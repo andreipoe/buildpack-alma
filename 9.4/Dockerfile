@@ -1,8 +1,8 @@
-FROM almalinux:8
+FROM almalinux:9.4
 LABEL maintainer "Andrei Poenaru <docker@simd.stream>"
 
-RUN yum install -y epel-release && \
-    yum install -y \
+RUN dnf install -y epel-release && \
+    dnf install -y --allowerasing \
         autoconf \
         automake \
         byacc \
@@ -21,7 +21,6 @@ RUN yum install -y epel-release && \
         libxml2-devel \
         libxslt-devel \
         make \
-        mysql-devel \
         ncurses-devel \
         openssl \
         openssl-devel \
@@ -34,4 +33,4 @@ RUN yum install -y epel-release && \
         which \
         xz \
         zlib-devel && \
-    yum clean all
+    dnf clean all

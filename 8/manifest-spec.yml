@@ -1,5 +1,4 @@
 image: andreipoe/buildpack-alma:8
-tags: [latest]
 
 manifests:
   - image: andreipoe/buildpack-alma:8-aarch64

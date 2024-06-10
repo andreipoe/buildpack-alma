@@ -1,4 +1,4 @@
-FROM almalinux:8
+FROM almalinux:8.10
 LABEL maintainer "Andrei Poenaru <docker@simd.stream>"
 
 RUN yum install -y epel-release && \

@@ -8,52 +8,13 @@ platform:
   os: linux
 
 steps:
-  - name: build-8.4
+  - name: build-8.10
     image: plugins/docker
     settings:
       repo: andreipoe/buildpack-alma
       tags:
-        - 8.4-aarch64
-      dockerfile: 8.4/Dockerfile
-      username: andreipoe
-      password:
-        from_secret: docker_token
-    depends_on: [clone]
-    when:
-      status: [success, failure]
-  - name: build-8.5
-    image: plugins/docker
-    settings:
-      repo: andreipoe/buildpack-alma
-      tags:
-        - 8.5-aarch64
-      dockerfile: 8.5/Dockerfile
-      username: andreipoe
-      password:
-        from_secret: docker_token
-    depends_on: [clone]
-    when:
-      status: [success, failure]
-  - name: build-8.6
-    image: plugins/docker
-    settings:
-      repo: andreipoe/buildpack-alma
-      tags:
-        - 8.6-aarch64
-      dockerfile: 8.6/Dockerfile
-      username: andreipoe
-      password:
-        from_secret: docker_token
-    depends_on: [clone]
-    when:
-      status: [success, failure]
-  - name: build-8.7
-    image: plugins/docker
-    settings:
-      repo: andreipoe/buildpack-alma
-      tags:
-        - 8.7-aarch64
-      dockerfile: 8.7/Dockerfile
+        - 8.10-aarch64
+      dockerfile: 8.10/Dockerfile
       username: andreipoe
       password:
         from_secret: docker_token
@@ -66,7 +27,6 @@ steps:
       repo: andreipoe/buildpack-alma
       tags:
         - 8-aarch64
-        - latest-aarch64
       dockerfile: 8/Dockerfile
       username: andreipoe
       password:
@@ -80,6 +40,7 @@ steps:
       repo: andreipoe/buildpack-alma
       tags:
         - 9-aarch64
+        - latest-aarch64
       dockerfile: 9/Dockerfile
       username: andreipoe
       password:
@@ -100,6 +61,45 @@ steps:
     depends_on: [clone]
     when:
       status: [success, failure]
+  - name: build-9.2
+    image: plugins/docker
+    settings:
+      repo: andreipoe/buildpack-alma
+      tags:
+        - 9.2-aarch64
+      dockerfile: 9.2/Dockerfile
+      username: andreipoe
+      password:
+        from_secret: docker_token
+    depends_on: [clone]
+    when:
+      status: [success, failure]
+  - name: build-9.3
+    image: plugins/docker
+    settings:
+      repo: andreipoe/buildpack-alma
+      tags:
+        - 9.3-aarch64
+      dockerfile: 9.3/Dockerfile
+      username: andreipoe
+      password:
+        from_secret: docker_token
+    depends_on: [clone]
+    when:
+      status: [success, failure]
+  - name: build-9.4
+    image: plugins/docker
+    settings:
+      repo: andreipoe/buildpack-alma
+      tags:
+        - 9.4-aarch64
+      dockerfile: 9.1/Dockerfile
+      username: andreipoe
+      password:
+        from_secret: docker_token
+    depends_on: [clone]
+    when:
+      status: [success, failure]
 
 ---
 kind: pipeline
@@ -111,52 +111,13 @@ platform:
   os: linux
 
 steps:
-  - name: build-8.4
+  - name: build-8.10
     image: plugins/docker
     settings:
       repo: andreipoe/buildpack-alma
       tags:
-        - 8.4-amd64
-      dockerfile: 8.4/Dockerfile
-      username: andreipoe
-      password:
-        from_secret: docker_token
-    depends_on: [clone]
-    when:
-      status: [success, failure]
-  - name: build-8.5
-    image: plugins/docker
-    settings:
-      repo: andreipoe/buildpack-alma
-      tags:
-        - 8.5-amd64
-      dockerfile: 8.5/Dockerfile
-      username: andreipoe
-      password:
-        from_secret: docker_token
-    depends_on: [clone]
-    when:
-      status: [success, failure]
-  - name: build-8.6
-    image: plugins/docker
-    settings:
-      repo: andreipoe/buildpack-alma
-      tags:
-        - 8.6-amd64
-      dockerfile: 8.6/Dockerfile
-      username: andreipoe
-      password:
-        from_secret: docker_token
-    depends_on: [clone]
-    when:
-      status: [success, failure]
-  - name: build-8.7
-    image: plugins/docker
-    settings:
-      repo: andreipoe/buildpack-alma
-      tags:
-        - 8.7-amd64
-      dockerfile: 8.7/Dockerfile
+        - 8.10-amd64
+      dockerfile: 8.10/Dockerfile
       username: andreipoe
       password:
         from_secret: docker_token
@@ -169,7 +130,6 @@ steps:
       repo: andreipoe/buildpack-alma
       tags:
         - 8-amd64
-        - latest-amd64
       dockerfile: 8/Dockerfile
       username: andreipoe
       password:
@@ -183,6 +143,7 @@ steps:
       repo: andreipoe/buildpack-alma
       tags:
         - 9-amd64
+        - latest-amd64
       dockerfile: 9/Dockerfile
       username: andreipoe
       password:
@@ -203,6 +164,45 @@ steps:
     depends_on: [clone]
     when:
       status: [success, failure]
+  - name: build-9.2
+    image: plugins/docker
+    settings:
+      repo: andreipoe/buildpack-alma
+      tags:
+        - 9.2-amd64
+      dockerfile: 9.2/Dockerfile
+      username: andreipoe
+      password:
+        from_secret: docker_token
+    depends_on: [clone]
+    when:
+      status: [success, failure]
+  - name: build-9.3
+    image: plugins/docker
+    settings:
+      repo: andreipoe/buildpack-alma
+      tags:
+        - 9.3-amd64
+      dockerfile: 9.3/Dockerfile
+      username: andreipoe
+      password:
+        from_secret: docker_token
+    depends_on: [clone]
+    when:
+      status: [success, failure]
+  - name: build-9.4
+    image: plugins/docker
+    settings:
+      repo: andreipoe/buildpack-alma
+      tags:
+        - 9.4-amd64
+      dockerfile: 9.4/Dockerfile
+      username: andreipoe
+      password:
+        from_secret: docker_token
+    depends_on: [clone]
+    when:
+      status: [success, failure]
 
 ---
 kind: pipeline
@@ -210,31 +210,10 @@ type: docker
 name: multiarch-manifest
 
 steps:
-  - name: manifest-8.4
+  - name: manifest-8.10
     image: plugins/manifest
     settings:
-      spec: 8.4/manifest-spec.yml
-      username: andreipoe
-      password:
-        from_secret: docker_token
-  - name: manifest-8.5
-    image: plugins/manifest
-    settings:
-      spec: 8.5/manifest-spec.yml
-      username: andreipoe
-      password:
-        from_secret: docker_token
-  - name: manifest-8.6
-    image: plugins/manifest
-    settings:
-      spec: 8.6/manifest-spec.yml
-      username: andreipoe
-      password:
-        from_secret: docker_token
-  - name: manifest-8.7
-    image: plugins/manifest
-    settings:
-      spec: 8.7/manifest-spec.yml
+      spec: 8.10/manifest-spec.yml
       username: andreipoe
       password:
         from_secret: docker_token
@@ -256,6 +235,27 @@ steps:
     image: plugins/manifest
     settings:
       spec: 9.1/manifest-spec.yml
+      username: andreipoe
+      password:
+        from_secret: docker_token
+  - name: manifest-9.2
+    image: plugins/manifest
+    settings:
+      spec: 9.2/manifest-spec.yml
+      username: andreipoe
+      password:
+        from_secret: docker_token
+  - name: manifest-9.3
+    image: plugins/manifest
+    settings:
+      spec: 9.3/manifest-spec.yml
+      username: andreipoe
+      password:
+        from_secret: docker_token
+  - name: manifest-9.4
+    image: plugins/manifest
+    settings:
+      spec: 9.4/manifest-spec.yml
       username: andreipoe
       password:
         from_secret: docker_token
@@ -282,6 +282,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 3c9b9c6448141f7b845a403dae31dedd9dfc65b81adf72bf7a21e080bad80172
+hmac: 5a713b5b1d4aef569ddb242f44f73ff57b6a6363ec50faf0842edb89856a0af4
 
 ...
